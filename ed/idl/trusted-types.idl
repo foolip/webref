@@ -97,27 +97,27 @@ partial interface mixin WindowOrWorkerGlobalScope {
 };
 
 [Exposed=(Window,Worker)]
-partial interface Worker : EventTarget {
+partial interface Worker {
     constructor(ScriptURLString scriptURL, optional WorkerOptions options = {});
 };
 
 [Exposed=(Window,Worker)]
-partial interface SharedWorker : EventTarget {
+partial interface SharedWorker {
   constructor(ScriptURLString scriptURL, optional (DOMString or WorkerOptions) options = {});
 };
 
 [Exposed=Worker]
-partial interface WorkerGlobalScope : EventTarget {
+partial interface WorkerGlobalScope {
   void importScripts(ScriptURLString... urls);
 };
 
 [SecureContext, Exposed=(Window,Worker)]
-partial interface ServiceWorkerContainer : EventTarget {
+partial interface ServiceWorkerContainer {
    [NewObject] Promise<ServiceWorkerRegistration> register(ScriptURLString scriptURL, optional RegistrationOptions options = {});
 };
 
 [Exposed=Window]
-partial interface mixin SVGAnimatedString {
+partial interface SVGAnimatedString {
            attribute (DOMString or TrustedScriptURL) baseVal;
 };
 
