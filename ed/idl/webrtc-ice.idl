@@ -3,9 +3,7 @@
 // (https://github.com/tidoust/reffy-reports)
 // Source: IceTransport Extensions for WebRTC (https://w3c.github.io/webrtc-ice/)
 
-dictionary RTCIceParameters {
-             required DOMString usernameFragment;
-             required DOMString password;
+partial dictionary RTCIceParameters {
              boolean   iceLite;
 };
 
@@ -18,9 +16,9 @@ dictionary RTCIceGatherOptions {
 partial interface RTCIceTransport {
     constructor();
     void                      gather (optional RTCIceGatherOptions options = {});
-    void                      start (RTCIceParameters remoteParameters, optional RTCIceRole role = "controlled");
+    void                      start (optional RTCIceParameters remoteParameters = {}, optional RTCIceRole role = "controlled");
     void                      stop ();
-    void                      addRemoteCandidate (RTCIceCandidateInit remoteCandidate);
+    void                      addRemoteCandidate (optional RTCIceCandidateInit remoteCandidate = {});
                     attribute EventHandler        onerror;
                     attribute EventHandler        onicecandidate;
 };
