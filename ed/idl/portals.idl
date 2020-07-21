@@ -43,8 +43,6 @@ dictionary PortalActivateEventInit : EventInit {
     any data = null;
 };
 
-typedef (WindowProxy or MessagePort or ServiceWorker or HTMLPortalElement or PortalHost) MessageEventSource;
-
 partial interface mixin WindowEventHandlers {
     attribute EventHandler onportalactivate;
 };
