@@ -8,7 +8,7 @@ interface TimeEvent : Event {
   readonly attribute WindowProxy? view;
   readonly attribute long detail;
 
-  void initTimeEvent(DOMString typeArg, Window? viewArg, long detailArg);
+  undefined initTimeEvent(DOMString typeArg, Window? viewArg, long detailArg);
 };
 
 interface SVGAnimationElement : SVGElement {
@@ -23,10 +23,10 @@ interface SVGAnimationElement : SVGElement {
   float getCurrentTime();
   float getSimpleDuration();
 
-  void beginElement();
-  void beginElementAt(float offset);
-  void endElement();
-  void endElementAt(float offset);
+  undefined beginElement();
+  undefined beginElementAt(float offset);
+  undefined endElement();
+  undefined endElementAt(float offset);
 };
 
 SVGAnimationElement includes SVGTests;
@@ -52,9 +52,9 @@ interface SVGDiscardElement : SVGAnimationElement {
 };
 
 partial interface SVGSVGElement {
-  void pauseAnimations();
-  void unpauseAnimations();
+  undefined pauseAnimations();
+  undefined unpauseAnimations();
   boolean animationsPaused();
   float getCurrentTime();
-  void setCurrentTime(float seconds);
+  undefined setCurrentTime(float seconds);
 };
