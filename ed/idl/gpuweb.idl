@@ -705,17 +705,17 @@ interface GPUCommandEncoder {
     undefined copyBufferToTexture(
         GPUBufferCopyView source,
         GPUTextureCopyView destination,
-        GPUExtent3D copySize);
+        optional GPUExtent3D copySize);
 
     undefined copyTextureToBuffer(
         GPUTextureCopyView source,
         GPUBufferCopyView destination,
-        GPUExtent3D copySize);
+        optional GPUExtent3D copySize);
 
     undefined copyTextureToTexture(
         GPUTextureCopyView source,
         GPUTextureCopyView destination,
-        GPUExtent3D copySize);
+        optional GPUExtent3D copySize);
 
     undefined pushDebugGroup(USVString groupLabel);
     undefined popDebugGroup();
@@ -908,12 +908,12 @@ interface GPUQueue {
       GPUTextureCopyView destination,
       [AllowShared] BufferSource data,
       GPUTextureDataLayout dataLayout,
-      GPUExtent3D size);
+      optional GPUExtent3D size);
 
     undefined copyImageBitmapToTexture(
         GPUImageBitmapCopyView source,
         GPUTextureCopyView destination,
-        GPUExtent3D copySize);
+        optional GPUExtent3D copySize);
 };
 GPUQueue includes GPUObjectBase;
 
