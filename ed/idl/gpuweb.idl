@@ -896,7 +896,7 @@ interface GPUQueue {
     undefined writeTexture(
       GPUTextureCopyView destination,
       [AllowShared] BufferSource data,
-      GPUTextureDataLayout dataLayout,
+      optional GPUTextureDataLayout dataLayout,
       optional GPUExtent3D size);
 
     undefined copyImageBitmapToTexture(
