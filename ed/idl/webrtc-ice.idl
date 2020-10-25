@@ -15,10 +15,10 @@ dictionary RTCIceGatherOptions {
 [Exposed=Window]
 partial interface RTCIceTransport {
     constructor();
-    void                      gather (optional RTCIceGatherOptions options = {});
-    void                      start (optional RTCIceParameters remoteParameters = {}, optional RTCIceRole role = "controlled");
-    void                      stop ();
-    void                      addRemoteCandidate (optional RTCIceCandidateInit remoteCandidate = {});
+    undefined                      gather (optional RTCIceGatherOptions options = {});
+    undefined                      start (optional RTCIceParameters remoteParameters = {}, optional RTCIceRole role = "controlled");
+    undefined                      stop ();
+    undefined                      addRemoteCandidate (optional RTCIceCandidateInit remoteCandidate = {});
                     attribute EventHandler        onerror;
                     attribute EventHandler        onicecandidate;
 };
