@@ -14,7 +14,7 @@ dictionary SVGPathDataSettings {
 
 interface mixin SVGPathData {
    sequence<SVGPathSegment> getPathData(optional SVGPathDataSettings settings);
-   void setPathData(sequence<SVGPathSegment> pathData);
+   undefined setPathData(sequence<SVGPathSegment> pathData);
 };
 
 interface SVGPathElement : SVGGeometryElement {

@@ -1953,7 +1953,7 @@ interface mixin WindowOrWorkerGlobalScope {
   undefined clearInterval(optional long handle = 0);
 
   // microtask queuing
-  undefined queueMicrotask(VoidFunction callback);
+  undefined queueMicrotask(undefinedFunction callback);
 
   // ImageBitmap
   Promise<ImageBitmap> createImageBitmap(ImageBitmapSource image, optional ImageBitmapOptions options = {});
