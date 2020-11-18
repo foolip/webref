@@ -182,9 +182,9 @@ dictionary AudioFrameInit {
 
 [Exposed=(Window,Worker)]
 interface VideoFrame {
-  constructor(ImageBitmap imageBitmap, VideoFrameInit frameInit);
+  constructor(ImageBitmap imageBitmap, optional VideoFrameInit frameInit);
   constructor(PixelFormat pixelFormat, sequence<(Plane or PlaneInit)> planes,
-              VideoFrameInit frameInit);
+              optional VideoFrameInit frameInit);
 
   readonly attribute PixelFormat format;
   readonly attribute FrozenArray<Plane> planes;
